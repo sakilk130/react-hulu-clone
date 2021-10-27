@@ -19,11 +19,11 @@ function Results({ selectedOption }) {
 
   return (
     <div className="results">
-      <FlipMove>
-        {movies.map((movie) => (
-          <VideoCard key={movie.original_title} movie={movie} />
-        ))}
-      </FlipMove>
+      {movies.map((movie) => (
+        <FlipMove>
+          <VideoCard key={movie.id} movie={movie} />
+        </FlipMove>
+      ))}
     </div>
   );
 }
